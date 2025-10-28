@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #2c3e50;
+    --light-bg: #f5f6fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('../assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: var(--secondary-color);
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Reviews Section */
+.reviews {
+    background-color: var(--light-bg);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.rating {
+    margin: 2rem 0;
+}
+
+.rating i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.rating i:hover,
+.rating i.active {
+    color: #f1c40f;
+}
+
+.terms {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .services-grid,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+    }
+}
