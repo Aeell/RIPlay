@@ -1,4 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Language switching functionality
+    const currentLang = localStorage.getItem('language') || 'en';
+    const langBtns = document.querySelectorAll('.lang-btn');
+    
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const keys = key.split('.');
+            let value = translations[lang];
+            for (const k of keys) {
+                value = value[k];
+            }
+            if (value) {
+                element.textContent = value;
+            }
+        });
+
+        // Update active button
+        langBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        localStorage.setItem('language', lang);
+    }
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+
+    // Set initial language
+    setLanguage(currentLang);
+
     // Scroll reveal animation
     const observerOptions = {
         threshold: 0.15,
