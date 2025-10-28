@@ -1,19 +1,22 @@
 :root {
-    --primary-color: #0a0a0a;
-    --secondary-color: #c41e3a;  /* Rich red */
+    --primary-color: #000000;
+    --secondary-color: #ff1744;  /* Vibrant red */
     --accent-color: #ffd700;     /* Gold */
     --text-color: #ffffff;
     --text-muted: #a0a0a0;
-    --dark-bg: #121212;
-    --darker-bg: #0a0a0a;
-    --card-bg: #1a1a1a;
+    --dark-bg: #0a0a0a;
+    --darker-bg: #000000;
+    --card-bg: #111111;
     --white: #ffffff;
-    --gradient-dark: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 100%);
-    --gradient-accent: linear-gradient(145deg, #c41e3a 0%, #8b0000 100%);
-    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-strong: 0 8px 15px rgba(0, 0, 0, 0.2);
-    --border-radius: 8px;
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    --gradient-accent: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
+    --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffab00 100%);
+    --shadow-soft: 0 4px 20px rgba(255, 23, 68, 0.15);
+    --shadow-strong: 0 8px 30px rgba(255, 23, 68, 0.2);
+    --border-radius: 12px;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --glow-red: 0 0 20px rgba(255, 23, 68, 0.5);
+    --glow-gold: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
 * {
@@ -37,14 +40,26 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-strong);
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: var(--glow-red);
+    animation: headerReveal 1s ease-out;
+}
+
+@keyframes headerReveal {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 nav {
@@ -57,16 +72,27 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    background: var(--gradient-accent);
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: var(--gradient-gold);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     position: relative;
-    padding-bottom: 4px;
+    padding: 10px 20px;
+    text-shadow: var(--glow-gold);
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    from {
+        filter: drop-shadow(0 0 2px var(--accent-color));
+    }
+    to {
+        filter: drop-shadow(0 0 10px var(--accent-color));
+    }
 }
 
 .logo::after {
@@ -96,7 +122,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(145deg, rgba(10,10,10,0.95), rgba(196,30,58,0.8));
+    background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(255,23,68,0.2));
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -107,6 +133,49 @@ nav {
     color: var(--white);
     position: relative;
     overflow: hidden;
+    animation: heroReveal 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 1s forwards;
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 20px rgba(255, 23, 68, 0.5);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(255, 23, 68, 0.8);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero::before {
@@ -163,14 +232,34 @@ nav {
 
 .service-card {
     background: var(--gradient-dark);
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: var(--border-radius);
     text-align: center;
     transition: var(--transition-smooth);
     box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(255, 215, 0, 0.1);
+    border: 2px solid var(--secondary-color);
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 4s;
+}
+
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0) rotateX(0);
+    }
+    50% {
+        transform: translateY(-20px) rotateX(5deg);
+    }
 }
 
 .service-card::before {
@@ -475,8 +564,32 @@ nav {
     object-fit: contain;
     background-color: var(--darker-bg);
     padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: var(--border-radius);
+    transition: var(--transition-smooth);
+    border: 2px solid var(--secondary-color);
+    box-shadow: var(--glow-red);
+    filter: brightness(0.9);
+}
+
+.project-image:hover {
+    transform: scale(1.05) translateY(-10px);
+    filter: brightness(1.1);
+    box-shadow: var(--glow-gold);
+    border-color: var(--accent-color);
+}
+
+.main-image {
+    transform-style: preserve-3d;
+    animation: imageFloat 8s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+    0%, 100% {
+        transform: translateY(0) rotateY(0);
+    }
+    50% {
+        transform: translateY(-15px) rotateY(5deg);
+    }
 }
 
 .project-image:hover {
@@ -541,6 +654,18 @@ nav {
     .image-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Scroll Animations */
+.services, .projects, .contact {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-smooth);
+}
+
+.services.reveal, .projects.reveal, .contact.reveal {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
