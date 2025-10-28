@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "language": "English",
+    "languageCode": "en"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Alternative IT Consulting Services",
+    "tagline": "Breaking free from corporate ecosystems with open-source solutions",
+    "cta": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "intro": "Customized alternative IT services, using only free and open source tools such as Linux, Raspberry Pi and others. We help you break free from the corporate ecosystems that dominate the IT world.",
+    "linux": {
+      "title": "Linux Solutions",
+      "description": "Open-source operating system implementations and support",
+      "features": [
+        "Custom distributions",
+        "Server optimization",
+        "Security hardening",
+        "Migration support"
+      ]
+    },
+    "raspberry": {
+      "title": "Raspberry Pi",
+      "description": "Custom solutions using affordable, versatile hardware",
+      "features": [
+        "IoT solutions",
+        "Custom automation",
+        "Home server setups",
+        "Industrial applications"
+      ]
+    },
+    "infrastructure": {
+      "title": "Open Source Infrastructure",
+      "description": "Free and open source alternatives to proprietary systems",
+      "features": [
+        "System architecture",
+        "Cloud solutions",
+        "Network optimization",
+        "Security implementation"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "linuxcnc": {
+      "title": "Custom LinuxCNC Implementation",
+      "description": "Professional CNC control solution using open-source software",
+      "features": [
+        "Real-time control",
+        "Custom interface",
+        "Multi-axis support",
+        "Industrial grade reliability"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": {
+      "label": "Address",
+      "value": "Mokrá 68, 46001 Liberec - Machnín",
+      "country": "Czechia"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+420 776 479 855"
+    },
+    "email": {
+      "label": "Email",
+      "value": "Stanwesly@protonmail.com"
+    },
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 RIPlay Consulting Services. All rights reserved.",
+    "terms": "By clicking a star you agree to the terms and conditions"
+  }
+}

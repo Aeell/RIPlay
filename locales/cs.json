@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "language": "Čeština",
+    "languageCode": "cs"
+  },
+  "navigation": {
+    "home": "Domů",
+    "services": "Služby",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Alternativní IT Konzultační Služby",
+    "tagline": "Osvobození od korporátních ekosystémů pomocí open-source řešení",
+    "cta": "Více Informací"
+  },
+  "services": {
+    "title": "Naše Služby",
+    "intro": "Přizpůsobené alternativní IT služby využívající pouze svobodné a open source nástroje jako Linux, Raspberry Pi a další. Pomáháme vám osvobodit se od korporátních ekosystémů, které dominují světu IT.",
+    "linux": {
+      "title": "Linux Řešení",
+      "description": "Implementace a podpora open-source operačních systémů",
+      "features": [
+        "Vlastní distribuce",
+        "Optimalizace serverů",
+        "Zabezpečení systémů",
+        "Podpora migrace"
+      ]
+    },
+    "raspberry": {
+      "title": "Raspberry Pi",
+      "description": "Vlastní řešení s využitím dostupného, univerzálního hardware",
+      "features": [
+        "IoT řešení",
+        "Vlastní automatizace",
+        "Domácí serverová řešení",
+        "Průmyslové aplikace"
+      ]
+    },
+    "infrastructure": {
+      "title": "Open Source Infrastruktura",
+      "description": "Svobodné a open source alternativy k proprietárním systémům",
+      "features": [
+        "Systémová architektura",
+        "Cloudová řešení",
+        "Optimalizace sítě",
+        "Implementace zabezpečení"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Významné Projekty",
+    "linuxcnc": {
+      "title": "Vlastní Implementace LinuxCNC",
+      "description": "Profesionální CNC řídící řešení pomocí open-source softwaru",
+      "features": [
+        "Řízení v reálném čase",
+        "Vlastní rozhraní",
+        "Podpora více os",
+        "Průmyslová spolehlivost"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Kontaktujte Nás",
+    "address": {
+      "label": "Adresa",
+      "value": "Mokrá 68, 46001 Liberec - Machnín",
+      "country": "Česká republika"
+    },
+    "phone": {
+      "label": "Telefon",
+      "value": "+420 776 479 855"
+    },
+    "email": {
+      "label": "Email",
+      "value": "Stanwesly@protonmail.com"
+    },
+    "social": {
+      "github": "GitHub Profil",
+      "linkedin": "LinkedIn Profil"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 RIPlay Konzultační Služby. Všechna práva vyhrazena.",
+    "terms": "Kliknutím na hvězdičku souhlasíte s podmínkami"
+  }
+}

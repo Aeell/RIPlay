@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "language": "Deutsch",
+    "languageCode": "de"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Alternative IT-Beratungsdienste",
+    "tagline": "Befreiung von Unternehmens-Ökosystemen durch Open-Source-Lösungen",
+    "cta": "Mehr Erfahren"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "intro": "Maßgeschneiderte alternative IT-Dienste, die ausschließlich freie und Open-Source-Tools wie Linux, Raspberry Pi und andere verwenden. Wir helfen Ihnen, sich von den Unternehmens-Ökosystemen zu befreien, die die IT-Welt dominieren.",
+    "linux": {
+      "title": "Linux-Lösungen",
+      "description": "Implementierung und Support von Open-Source-Betriebssystemen",
+      "features": [
+        "Angepasste Distributionen",
+        "Server-Optimierung",
+        "Sicherheitshärtung",
+        "Migrations-Support"
+      ]
+    },
+    "raspberry": {
+      "title": "Raspberry Pi",
+      "description": "Maßgeschneiderte Lösungen mit erschwinglicher, vielseitiger Hardware",
+      "features": [
+        "IoT-Lösungen",
+        "Individuelle Automatisierung",
+        "Heimserver-Einrichtungen",
+        "Industrielle Anwendungen"
+      ]
+    },
+    "infrastructure": {
+      "title": "Open-Source-Infrastruktur",
+      "description": "Freie und Open-Source-Alternativen zu proprietären Systemen",
+      "features": [
+        "Systemarchitektur",
+        "Cloud-Lösungen",
+        "Netzwerkoptimierung",
+        "Sicherheitsimplementierung"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "linuxcnc": {
+      "title": "Individuelle LinuxCNC-Implementierung",
+      "description": "Professionelle CNC-Steuerungslösung mit Open-Source-Software",
+      "features": [
+        "Echtzeitsteuerung",
+        "Angepasste Benutzeroberfläche",
+        "Mehrachsen-Unterstützung",
+        "Industrielle Zuverlässigkeit"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "address": {
+      "label": "Adresse",
+      "value": "Mokrá 68, 46001 Liberec - Machnín",
+      "country": "Tschechische Republik"
+    },
+    "phone": {
+      "label": "Telefon",
+      "value": "+420 776 479 855"
+    },
+    "email": {
+      "label": "E-Mail",
+      "value": "Stanwesly@protonmail.com"
+    },
+    "social": {
+      "github": "GitHub-Profil",
+      "linkedin": "LinkedIn-Profil"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 RIPlay Beratungsdienste. Alle Rechte vorbehalten.",
+    "terms": "Durch Klicken auf einen Stern stimmen Sie den Nutzungsbedingungen zu"
+  }
+}

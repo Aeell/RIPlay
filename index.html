@@ -4,180 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIPlay - Alternative IT Consulting Services</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RIPlay</div>
+    <!-- Header -->
+    <header class="site-header animate-on-scroll">
+        <nav class="container">
+            <div class="logo">
+                <a href="#" class="logo-link">RIPlay</a>
+            </div>
             <div class="nav-right">
-                <div class="weather">
+                <div class="weather-widget">
                     <i class="fas fa-temperature-low"></i>
                     <span id="weather-temp">7°</span>
                 </div>
                 <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="en">
+                    <button class="lang-btn" data-lang="en" aria-label="Switch to English">
                         <span class="fi fi-us"></span>
                     </button>
-                    <button class="lang-btn" data-lang="cs">
+                    <button class="lang-btn" data-lang="cs" aria-label="Přepnout do češtiny">
                         <span class="fi fi-cz"></span>
+                    </button>
+                    <button class="lang-btn" data-lang="de" aria-label="Auf Deutsch umschalten">
+                        <span class="fi fi-de"></span>
                     </button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero animate-on-scroll">
+        <div class="container">
             <div class="hero-content">
-                <h1 data-i18n="hero.title">Alternative IT Consulting Services</h1>
-                <p class="tagline" data-i18n="hero.tagline">Breaking free from corporate ecosystems with open-source solutions</p>
+                <h1 class="hero-title" data-i18n="hero.title">Alternative IT Consulting Services</h1>
+                <p class="hero-tagline" data-i18n="hero.tagline">Breaking free from corporate ecosystems with open-source solutions</p>
+                <a href="#services" class="cta-button" data-i18n="hero.cta">Learn More</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="services">
+        <!-- Services Section -->
+        <section id="services" class="services animate-on-scroll">
             <div class="container">
-                <h2 data-i18n="services.title">Our Services</h2>
-                <p class="services-intro" data-i18n="services.intro">Customized alternative IT services, using only free and open source tools such as Linux, Raspberry Pi and others. We help you break free from the corporate ecosystems that dominate the IT world.</p>
+                <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+                <p class="section-intro" data-i18n="services.intro">Customized alternative IT services, using only free and open source tools such as Linux, Raspberry Pi and others. We help you break free from the corporate ecosystems that dominate the IT world.</p>
+                
                 <div class="services-grid">
-                    <div class="service-card">
+                    <!-- Linux Solutions -->
+                    <article class="service-card animate-on-scroll">
                         <i class="fab fa-linux"></i>
                         <h3 data-i18n="services.linux.title">Linux Solutions</h3>
-                        <p data-i18n="services.linux.desc">Open-source operating system implementations and support</p>
-                    </div>
-                    <div class="service-card">
+                        <p data-i18n="services.linux.description">Open-source operating system implementations and support</p>
+                        <ul class="feature-list">
+                            <li data-i18n="services.linux.features.0">Custom distributions</li>
+                            <li data-i18n="services.linux.features.1">Server optimization</li>
+                            <li data-i18n="services.linux.features.2">Security hardening</li>
+                            <li data-i18n="services.linux.features.3">Migration support</li>
+                        </ul>
+                    </article>
+
+                    <!-- Raspberry Pi -->
+                    <article class="service-card animate-on-scroll">
                         <i class="fas fa-microchip"></i>
                         <h3 data-i18n="services.raspberry.title">Raspberry Pi</h3>
-                        <p data-i18n="services.raspberry.desc">Custom solutions using affordable, versatile hardware</p>
-                    </div>
-                    <div class="service-card">
+                        <p data-i18n="services.raspberry.description">Custom solutions using affordable, versatile hardware</p>
+                        <ul class="feature-list">
+                            <li data-i18n="services.raspberry.features.0">IoT solutions</li>
+                            <li data-i18n="services.raspberry.features.1">Custom automation</li>
+                            <li data-i18n="services.raspberry.features.2">Home server setups</li>
+                            <li data-i18n="services.raspberry.features.3">Industrial applications</li>
+                        </ul>
+                    </article>
+
+                    <!-- Infrastructure -->
+                    <article class="service-card animate-on-scroll">
                         <i class="fas fa-server"></i>
                         <h3 data-i18n="services.infrastructure.title">Open Source Infrastructure</h3>
-                        <p data-i18n="services.infrastructure.desc">Free and open source alternatives to proprietary systems</p>
-                    </div>
+                        <p data-i18n="services.infrastructure.description">Free and open source alternatives to proprietary systems</p>
+                        <ul class="feature-list">
+                            <li data-i18n="services.infrastructure.features.0">System architecture</li>
+                            <li data-i18n="services.infrastructure.features.1">Cloud solutions</li>
+                            <li data-i18n="services.infrastructure.features.2">Network optimization</li>
+                            <li data-i18n="services.infrastructure.features.3">Security implementation</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="projects" id="projects">
+        <!-- Projects Section -->
+        <section id="projects" class="projects animate-on-scroll">
             <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Custom LinuxCNC Implementation</h3>
-                        <div class="project-tags">
-                            <span>CNC Control</span>
-                            <span>Linux</span>
-                            <span>Automation</span>
-                        </div>
-                    </div>
+                <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
+                
+                <article class="project-card">
                     <div class="project-content">
-                        <div class="project-images">
-                            <div class="image-grid">
-                                <img src="assets/linuxcnc-interface.jpg" alt="LinuxCNC gmoccapy Interface" class="project-image main-image">
-                                <img src="assets/raspberry-pi-cnc.jpg" alt="Custom Control Board Setup" class="project-image">
-                                <img src="assets/mach3-migration.jpg" alt="Raspberry Pi 5 LinuxCNC Setup" class="project-image">
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <h4>Implementation Options</h4>
-                            <ul class="implementation-list">
-                                <li>
-                                    <strong>Raspberry Pi 5 Implementation:</strong>
-                                    <ul>
-                                        <li>Real-time control with custom interface boards</li>
-                                        <li>Multi-axis control capability</li>
-                                        <li>Integrated touchscreen support</li>
-                                        <li>Open-source hardware compatibility</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <strong>Advanced Features:</strong>
-                                    <ul>
-                                        <li>Custom G-code visualization</li>
-                                        <li>Real-time path preview</li>
-                                        <li>Manual control interface with MPG support</li>
-                                        <li>Configurable I/O mapping</li>
-                                    </ul>
-                                </li>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.linuxcnc.title">Custom LinuxCNC Implementation</h3>
+                            <p data-i18n="projects.linuxcnc.description">Professional CNC control solution using open-source software</p>
+                            <ul class="feature-list">
+                                <li data-i18n="projects.linuxcnc.features.0">Real-time control</li>
+                                <li data-i18n="projects.linuxcnc.features.1">Custom interface</li>
+                                <li data-i18n="projects.linuxcnc.features.2">Multi-axis support</li>
+                                <li data-i18n="projects.linuxcnc.features.3">Industrial grade reliability</li>
                             </ul>
-                            <h4>Controller Compatibility</h4>
-                            <div class="compatibility-grid">
-                                <div class="compat-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Mach3 USB Controllers</span>
-                                </div>
-                                <div class="compat-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Parallel Port Devices</span>
-                                </div>
-                                <div class="compat-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>ModBus Controllers</span>
-                                </div>
-                                <div class="compat-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Custom GPIO Solutions</span>
-                                </div>
+                        </div>
+                        <div class="project-images">
+                            <img src="assets/images/linuxcnc-interface.jpg" alt="LinuxCNC Interface" class="project-image main-image">
+                            <div class="image-grid">
+                                <img src="assets/images/raspberry-pi-cnc.jpg" alt="Raspberry Pi CNC Setup" class="project-image">
+                                <img src="assets/images/mach3-migration.jpg" alt="LinuxCNC Setup" class="project-image">
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <!-- Contact Section -->
+        <section id="contact" class="contact animate-on-scroll">
             <div class="container">
-                <h2 data-i18n="contact.title">Contact Us</h2>
-                <div class="contact-info">
-                    <div class="contact-card">
+                <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+                
+                <div class="contact-grid">
+                    <!-- Address -->
+                    <div class="contact-card animate-on-scroll">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p data-i18n="contact.address">Mokrá 68, 46001 Liberec - Machnín<br>Czechia</p>
+                        <h3 data-i18n="contact.address.label">Address</h3>
+                        <p>
+                            <span data-i18n="contact.address.value">Mokrá 68, 46001 Liberec - Machnín</span><br>
+                            <span data-i18n="contact.address.country">Czechia</span>
+                        </p>
                     </div>
-                    <div class="contact-card">
+
+                    <!-- Phone -->
+                    <div class="contact-card animate-on-scroll">
                         <i class="fas fa-phone"></i>
-                        <p><a href="tel:+420776479855" data-i18n="contact.phone">+420 776 479 855</a></p>
+                        <h3 data-i18n="contact.phone.label">Phone</h3>
+                        <p><a href="tel:+420776479855" data-i18n="contact.phone.value">+420 776 479 855</a></p>
                     </div>
-                    <div class="contact-card">
+
+                    <!-- Email -->
+                    <div class="contact-card animate-on-scroll">
                         <i class="fas fa-envelope"></i>
-                        <p><a href="mailto:Stanwesly@protonmail.com" data-i18n="contact.email">Stanwesly@protonmail.com</a></p>
+                        <h3 data-i18n="contact.email.label">Email</h3>
+                        <p><a href="mailto:Stanwesly@protonmail.com" data-i18n="contact.email.value">Stanwesly@protonmail.com</a></p>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/Aeell" target="_blank" rel="noopener noreferrer">
+
+                <!-- Social Links -->
+                <div class="social-links animate-on-scroll">
+                    <a href="https://github.com/Aeell" target="_blank" rel="noopener noreferrer" class="social-link">
                         <i class="fab fa-github"></i>
+                        <span class="visually-hidden" data-i18n="contact.social.github">GitHub Profile</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/s7stankov/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/s7stankov/" target="_blank" rel="noopener noreferrer" class="social-link">
                         <i class="fab fa-linkedin"></i>
+                        <span class="visually-hidden" data-i18n="contact.social.linkedin">LinkedIn Profile</span>
                     </a>
                 </div>
             </div>
         </section>
-
-        <section class="reviews">
-            <div class="container">
-                <h2>Share Your Experience</h2>
-                <div class="rating">
-                    <i class="far fa-star" data-rating="1"></i>
-                    <i class="far fa-star" data-rating="2"></i>
-                    <i class="far fa-star" data-rating="3"></i>
-                    <i class="far fa-star" data-rating="4"></i>
-                    <i class="far fa-star" data-rating="5"></i>
-                </div>
-                <p class="terms">By clicking a star you agree to the terms and conditions.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2025 RIPlay Consulting Services. All rights reserved.</p>
+            <p class="copyright" data-i18n="footer.copyright">© 2025 RIPlay Consulting Services. All rights reserved.</p>
+            <div class="rating">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+            </div>
+            <p class="terms" data-i18n="footer.terms">By clicking a star you agree to the terms and conditions</p>
         </div>
     </footer>
 
-    <script src="js/translations.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
 </body>
 </html>
