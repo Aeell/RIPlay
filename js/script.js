@@ -4,24 +4,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const langBtns = document.querySelectorAll('.lang-btn');
     
     function setLanguage(lang) {
+        console.log('Setting language to:', lang); // Debug log
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
+            console.log('Translating element:', element, 'with key:', key); // Debug log
             const keys = key.split('.');
             let value = translations[lang];
-            for (const k of keys) {
-                value = value[k];
-            }
-            if (value) {
-                element.textContent = value;
+            
+            try {
+                for (const k of keys) {
+                    value = value[k];
+                }
+                if (value) {
+                    if (element.tagName === 'A' || element.tagName === 'BUTTON') {
+                        // For links and buttons, preserve the HTML
+                        element.innerHTML = value;
+                    } else {
+                        element.textContent = value;
+                    }
+                    console.log('Translated to:', value); // Debug log
+                }
+            } catch (error) {
+                console.error('Translation error for key:', key, error); // Debug log
             }
         });
 
-        // Update active button
+        // Update active button and store preference
         langBtns.forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
 
         localStorage.setItem('language', lang);
+        console.log('Language set to:', lang); // Debug log
     }
 
     langBtns.forEach(btn => {

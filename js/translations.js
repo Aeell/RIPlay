@@ -1,5 +1,10 @@
 const translations = {
     en: {
+        hero: {
+            title: "Alternative IT Consulting Services",
+            tagline: "Breaking free from corporate ecosystems with open-source solutions"
+        },
+    en: {
         services: {
             title: "Our Services",
             intro: "Customized alternative IT services, using only free and open source tools such as Linux, Raspberry Pi and others. We help you break free from the corporate ecosystems that dominate the IT world.",
