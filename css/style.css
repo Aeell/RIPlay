@@ -267,19 +267,33 @@ nav {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.image-grid img:first-child {
-    grid-column: span 3;
-    height: 200px;
-    object-fit: cover;
+.main-image {
+    grid-column: span 2;
+    max-height: 400px;
+    width: 100%;
+    object-fit: contain;
+    background-color: var(--darker-bg);
+    padding: 1rem;
+    border-radius: 8px;
 }
 
-.image-grid img:not(:first-child) {
-    height: 150px;
-    object-fit: cover;
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--darker-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
 }
 
 .project-image {
